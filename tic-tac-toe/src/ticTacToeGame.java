@@ -16,7 +16,7 @@ public static void intro()
 		Scanner userInput = new Scanner(System.in);
 		print("What is your name?");
 		String name = userInput.nextLine();
-		print("Hello " + name + " and welcome to tic-tac-toe");
+		print("Hello " + name + " and welcome to tic-tac-toe!");
 	}
 		
 		
