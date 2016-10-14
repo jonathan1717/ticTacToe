@@ -1,9 +1,10 @@
 
 public class ticTacToeBoard
 	{
-
+//finish array for board
 		public static void main(String[] args)
 			{
+				String[][] board = new String [3][3];
 				displayBoard();
 			}
 		
@@ -25,9 +26,9 @@ public class ticTacToeBoard
 					}
 				public static void displayBoard()
 				{
-					print("\n      1    2    3");      
+					print("\n      1    2   3");      
 					print("   |--------------|");
-					print("A  |    |    |    |");
+					print("A  |  " + board[0][0] + " |    |    |");
 					print("   |--------------|");
 					print("B  |    |    |    |");
 					print("   |--------------|");
