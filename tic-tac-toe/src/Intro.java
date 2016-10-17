@@ -1,14 +1,8 @@
 import java.util.Scanner;
 
-public class ticTacToeGame
+public class Intro
 	{
 
-		public static void main(String[] args)
-			{
-				
-				intro();
-
-			}
 		
 public static void intro()
 	{

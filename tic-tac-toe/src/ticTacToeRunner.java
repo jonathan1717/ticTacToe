@@ -4,8 +4,9 @@ public class ticTacToeRunner
 
 		public static void main(String[] args)
 			{
-				ticTacToeGame.intro();
-				ticTacToeBoard.displayBoard();
+				Board.fillEmptySpaces();
+				Intro.intro();
+				Board.display();
 			}
 
 	}
