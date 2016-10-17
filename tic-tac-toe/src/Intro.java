@@ -4,7 +4,7 @@ public class Intro
 	{
 
 		
-public static void intro()
+public static void greeting()
 	{
 		@SuppressWarnings("resource")
 		Scanner userInput = new Scanner(System.in);
