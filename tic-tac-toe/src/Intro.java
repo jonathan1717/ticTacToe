@@ -1,9 +1,7 @@
 import java.util.Scanner;
 
 public class Intro
-	{
-
-		
+	{	
 public static void greeting()
 	{
 		@SuppressWarnings("resource")
