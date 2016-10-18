@@ -6,7 +6,9 @@ public class ticTacToeRunner
 			{
 				Board.fillEmptySpaces();
 				Intro.greeting();
-				Board.display();
+				Intro.takeMove();
+				
 			}
+
 
 	}
