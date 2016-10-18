@@ -1,7 +1,5 @@
-
 public class Board
 	{
-//finish array for board
 		static String[][] board = new String [3][3];
 		
 				public static void print(String s)  
