@@ -1,4 +1,3 @@
-
 public class Board
 	{
 		static String[][] board = new String [3][3];
