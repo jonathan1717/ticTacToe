@@ -34,7 +34,7 @@ public class Game
 		{
 			@SuppressWarnings("resource")
 			Scanner userInput = new Scanner(System.in);
-			print(" Please type in the first coordinates of your move (e.g. a1)");
+			print(" Please type in the coordinates of your move (e.g. a1)");
 			String move = userInput.nextLine();
 			switch (move.substring(0,1))
 					{
@@ -68,25 +68,35 @@ public class Game
 		
 		int row1=(int) (Math.random()*3);
 		int column1=(int) (Math.random()*3);
-		Board.board[row1][column1]="O";
 		print("It is your opponent's move.");
-		Board.display();	
+		if (Board.board[row1][column1].equals(" "))
+			{
+			Board.board[row1][column1]="O";
+			Board.display();
+			}
+		else 
+		{
+			opponentMove();
+		}
+		
+			
 	}
 	
 	public static void checkIfWon()
 	{
-		if ((Board.board[0][0].equals(Board.board[0][1]) && Board.board[0][1].equals(Board.board[0][2]) && !Board.board[0][0].equals(" ")) ||
-			(Board.board[1][0].equals(Board.board[1][1]) && Board.board[1][1].equals(Board.board[1][2]) && !Board.board[1][0].equals(" ")) ||	
-			(Board.board[2][0].equals(Board.board[2][1]) && Board.board[2][1].equals(Board.board[2][2]) && !Board.board[2][0].equals(" ")) ||
-			(Board.board[0][0].equals(Board.board[1][0]) && Board.board[1][0].equals(Board.board[2][0]) && !Board.board[0][0].equals(" ")) ||
-			(Board.board[0][1].equals(Board.board[1][1]) && Board.board[1][1].equals(Board.board[2][1]) && !Board.board[0][1].equals(" ")) ||
-			(Board.board[0][2].equals(Board.board[1][2]) && Board.board[1][2].equals(Board.board[2][2]) && !Board.board[0][2].equals(" ")) ||
-			(Board.board[0][0].equals(Board.board[1][1]) && Board.board[1][1].equals(Board.board[2][2]) && !Board.board[0][0].equals(" ")) ||
-			(Board.board[0][2].equals(Board.board[1][1]) && Board.board[1][1].equals(Board.board[2][0]) && !Board.board[0][2].equals(" ")))
+		
+		if     ((Board.board[0][0].equals(Board.board[0][1]) && Board.board[0][1].equals(Board.board[0][2]) && !Board.board[0][0].equals(" ")) ||
+				(Board.board[1][0].equals(Board.board[1][1]) && Board.board[1][1].equals(Board.board[1][2]) && !Board.board[1][0].equals(" ")) ||	
+				(Board.board[2][0].equals(Board.board[2][1]) && Board.board[2][1].equals(Board.board[2][2]) && !Board.board[2][0].equals(" ")) ||
+				(Board.board[0][0].equals(Board.board[1][0]) && Board.board[1][0].equals(Board.board[2][0]) && !Board.board[0][0].equals(" ")) ||
+				(Board.board[0][1].equals(Board.board[1][1]) && Board.board[1][1].equals(Board.board[2][1]) && !Board.board[0][1].equals(" ")) ||
+				(Board.board[0][2].equals(Board.board[1][2]) && Board.board[1][2].equals(Board.board[2][2]) && !Board.board[0][2].equals(" ")) ||
+				(Board.board[0][0].equals(Board.board[1][1]) && Board.board[1][1].equals(Board.board[2][2]) && !Board.board[0][0].equals(" ")) ||
+				(Board.board[0][2].equals(Board.board[1][1]) && Board.board[1][1].equals(Board.board[2][0]) && !Board.board[0][2].equals(" ")))
 			{
-				print("The game is over!");
+				print("The game is over");
 				ticTacToeRunner.keepPlaying = false;
+				System.exit(0);	
 			}
-	}
-					
+	}				
 }
