@@ -94,7 +94,7 @@ public class Game
 				(Board.board[0][0].equals(Board.board[1][1]) && Board.board[1][1].equals(Board.board[2][2]) && !Board.board[0][0].equals(" ")) ||
 				(Board.board[0][2].equals(Board.board[1][1]) && Board.board[1][1].equals(Board.board[2][0]) && !Board.board[0][2].equals(" ")))
 			{
-				print("The game is over");
+				print("The game is over!");
 				ticTacToeRunner.keepPlaying = false;
 				System.exit(0);	
 			}
