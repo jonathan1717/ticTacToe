@@ -2,7 +2,7 @@ public class Board
 	{
 		static String[][] board = new String [3][3];
 		
-				public static void print(String s)  
+				public static void print(String s)   
 					{
 						for(int i = 0; i < s.length(); i++)
 							{
@@ -18,7 +18,7 @@ public class Board
 							}
 						System.out.println();
 					}
-				public static void display()
+				public static void display() 
 				{
 					print("\n       1    2    3");      
 					print("   |-----------------|");
@@ -31,7 +31,7 @@ public class Board
 					System.out.println();
 				}
 				
-				public static void fillEmptySpaces()
+				public static void fillEmptySpaces() 
 					{
 						for (int row =0; row< 3; row++)
 							{

@@ -13,7 +13,7 @@ public class ticTacToeRunner
 					{
 						Game.takeMovePlayer();
 						Game.checkIfWon();
-						ai.opponentDialogue();
+						ai.opponentMove();
 						Game.checkIfWon();
 					}
 				

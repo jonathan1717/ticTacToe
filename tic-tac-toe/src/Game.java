@@ -4,7 +4,7 @@ public class Game
 {	
 		static int row,column;	
 		
-	public static void greeting()
+	public static void greeting() 
 	{
 		@SuppressWarnings("resource")
 		Scanner userInput = new Scanner(System.in);
@@ -14,7 +14,7 @@ public class Game
 		Board.display();
 	}
 	
-	public static void print(String s)  
+	public static void print(String s)   
 			{
 				for(int i = 0; i < s.length(); i++)
 					{
@@ -30,7 +30,7 @@ public class Game
 					}
 			}
 
-	public static void takeMovePlayer()
+	public static void takeMovePlayer() 
 		{
 			@SuppressWarnings("resource")
 			Scanner userInput = new Scanner(System.in);
@@ -72,10 +72,11 @@ public class Game
 			
 			Board.display();
 			
+			
 		}
 	
 	
-	public static void checkIfWon()
+	public static void checkIfWon() 
 	{
 		
 		if     ((Board.board[0][0].equals(Board.board[0][1]) && Board.board[0][1].equals(Board.board[0][2]) && !Board.board[0][0].equals(" ")) ||
