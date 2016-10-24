@@ -58,29 +58,22 @@ public class Game
 								}
 					}
 			column = Integer.parseInt(move.substring(1)) - 1;
+			if (Board.board[row][column].equals("O"))
+				{
+					print("That is cheating!");
+					takeMovePlayer();
+				}
+			else if (Board.board[row][column].equals("X"))
+				{
+					print("You already did that!");
+					takeMovePlayer();
+				}
 			Board.board[row][column]="X";
-				
+			
 			Board.display();
 			
 		}
-	public static void opponentMove()
-	{
-		
-		int row1=(int) (Math.random()*3);
-		int column1=(int) (Math.random()*3);
-		print("It is your opponent's move.");
-		if (Board.board[row1][column1].equals(" "))
-			{
-			Board.board[row1][column1]="O";
-			Board.display();
-			}
-		else 
-		{
-			opponentMove();
-		}
-		
-			
-	}
+	
 	
 	public static void checkIfWon()
 	{
