@@ -5,11 +5,11 @@ public class ai
 		public static void opponentMove() 
 			{
 				Game.print("It is your opponent's move.");
-				generateOpponentMove();
+				genOpponentMove();
 				Board.display();
 			}
 		
-		public static void generateOpponentMove() 
+		public static void genOpponentMove() 
 			{
 				int row=(int) (Math.random()*3);
 				int column=(int) (Math.random()*3);
@@ -19,11 +19,13 @@ public class ai
 							}
 					else
 						{
-							generateOpponentMove();
+							genOpponentMove();
 						}
 			}
+		
 		public static void placePiece(int r, int c) 
 			{
 				Board.board[r][c]="O";
-			}
-} 
+		}
+		
+}
