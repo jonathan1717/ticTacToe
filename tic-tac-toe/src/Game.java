@@ -21,7 +21,7 @@ public class Game
 						System.out.print(s.substring(i, i+1));
 						try
 							{
-								Thread.sleep(5);
+								Thread.sleep(50);
 							}
 								catch (InterruptedException e)
 							{
@@ -29,7 +29,6 @@ public class Game
 							}
 					}
 			}
-
 	public static void takeMovePlayer() 
 		{
 			@SuppressWarnings("resource")
